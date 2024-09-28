@@ -1,0 +1,102 @@
+<!--addProduct.html file-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Add Product</title>
+</head>
+
+<!--Internal CSS-->
+<style>
+h1
+ {
+ text-shadow: 2px 2px 4px grey;
+ background-color: white;
+ font-family: fantasy;
+ text-align: center;
+ font-size: 100px;
+ }
+
+ body
+ {
+ background-color: lightblue;
+ }
+
+ .form
+ {
+ border: solid black 1px;
+ font-family: fantasy;
+ border-radius: 10px;
+ text-align: center;
+ padding-top: 20px;
+ margin-left: 22%;
+ font-size: 30px;
+ padding: 30px;
+ height: 50%;
+ width: 50%;
+ }
+
+ input
+ {
+ border-radius: 15px;
+ font-size: 25px;
+ }
+
+ .submit
+ {
+ background-color: white;
+ font-family: fantasy;
+ font-size: 20px;
+ padding: 6px;
+ }
+
+ .submit:hover
+ {
+ color: lightgrey
+ }
+
+ a
+ {
+ background-color: white;
+ text-decoration: none;
+ font-family: fantasy;
+ margin-left: 43%;
+ font-size: 30px;
+ padding: 8px;
+ color: purple;
+ }
+
+ a:hover
+ {
+ color: lightgrey;
+ }
+</style>
+
+<body>
+
+<!--Heading-->
+<h1 class>Add Product</h1>
+
+<!--To denote a form-->
+<div class="form">
+<form action="#" th:action="@{/addProduct}" th:object="${product}" method="post">
+    <label>Name</label><br>
+    <label>
+        <input type="text" th:field="*{name}" placeholder="Enter your product name" autocomplete="off" required/>
+    </label><br>
+    <label>Price</label><br>
+    <label>
+        <input type="number" th:field="*{price}" required/>
+    </label><br>
+    <label>Category</label><br>
+    <label>
+        <input type="text" th:field="*{category}" placeholder="Enter category" autocomplete="off" required/>
+    </label><br><br>
+    <button type="submit" class="submit">Submit</button>
+</form>
+</div><br>
+
+<!--Hyperlink which is used for Back to home action-->
+<a href="/">Back to Home</a>
+
+</body>
+</html>

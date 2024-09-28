@@ -1,0 +1,51 @@
+<!--index.html file-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Product Catalog</title>
+</head>
+
+<!--Internal CSS-->
+<style>
+h1
+{
+text-shadow: 2px 2px 4px grey;
+background-color: white;
+font-family: fantasy;
+text-align: center;
+font-size: 150px;
+}
+
+body
+{
+background-color: lightblue;
+}
+
+a:link
+{
+background-color: white;
+text-decoration: none;
+font-family: fantasy;
+margin-left: 170px;
+font-size: 50px;
+padding: 100px;
+color: black;
+}
+
+a:hover
+{
+color: lightgrey;
+}
+</style>
+
+<body>
+
+<!--Heading-->
+<h1>Product Catalog</h1><br><br><br>
+
+<!--Hyperlinks to ADD and DISPLAY products-->
+<a href="/addProduct" >Add Product</a>
+<a href="/displayProducts">Display Products</a>
+
+</body>
+</html>
